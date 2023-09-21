@@ -1,6 +1,7 @@
 package gps;
 import junit.framework.Test;
 import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
 
 /**
@@ -18,12 +19,12 @@ public class Maintest extends TestCase {
     }
 
     /**
-     * Le test à exécuter.
+     * Donne les tests à exécuter.
      *
-     * @return the test
+     * @return les tests à exécuter
      */
     public static Test suite() {
-        return new Maintest( "testHello" );
+        return new TestSuite( Maintest.class );
     }
 
     /**
@@ -31,5 +32,9 @@ public class Maintest extends TestCase {
      */
     public void testHello() {
         assertEquals("Hello World!", Main.hello());
+    }
+
+    public void testHelloEcho() {
+        assertEquals("Test1234", Main.hello("Test1234"));
     }
 }

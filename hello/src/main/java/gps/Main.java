@@ -19,4 +19,15 @@ public class Main {
     public static String hello() {
         return "Hello World!";
     }
+
+    /**
+     * La méthode hello.
+     *
+     * @param echo le message à afficher
+     *
+     * @return le message de bienvenue
+     */
+    public static String hello(String echo) {
+        return echo;
+    }
 }
